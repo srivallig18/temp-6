@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function color()
+        {
+    
+         let colortxt = document.getElementById('colors').value 
+         let colorbg= document.getElementById('bgcolor').value
+         document.getElementById('txtDiv').style.color= colortxt;
+         document.getElementById('txtDiv').style.backgroundColor= colorbg;
+        }
+    </script>
+</body>
+<p><input type ="text" id="colors" placeholder ="enter a color"/></p>
+<select id="bgcolor">
+    <option value="pink">Pink</option>
+    <option value="purple">purple</option>
+    <option value="yellow">yellow</option>
+
+</select>
+<p></P><button onclick ="color()">Submit</button></html></p> 
+<div id="txtDiv">hello pookies</div>
+</html>

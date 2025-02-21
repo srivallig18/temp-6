@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display:flex;
+            justify-content:center;
+        }
+        .box
+        {
+            margin:20px
+        }
+    </style>
+</head>
+<body>
+    <div id="data" ></div>
+    <script>
+        let products =[
+            {
+                id:1,
+                name:"vastuvu 1",
+                price: 10,
+                desc:"avasaram unte konnukondi",
+                url: "https://picsum.photos/id/26/300/300",
+            },
+            {
+                id:2,
+                name:"vastuvu 2",
+                price: 200,
+                desc:"inka avasaram unte konukondi",
+                url:"https://picsum.photos/id/36/300/300",
+            },
+            {
+                id:3,
+                name:"vastuvu 3",
+                price: 3000,
+                desc:"inka ekkuva avasaram unte konukondi",
+                url:"https://picsum.photos/id/48/300/300",
+
+            },
+        ];
+        let length=products.length;
+        let str="<div class='container'>"
+        for(let i=0;i<length;i++)
+        {
+        str=
+        str+
+        `<div class='box'><img src='${products[i].url}'/><h3> ${products[i].name}</h3>${products[i].desc}<p></p>${products[i].price}<p><button> add cheskondi</button></p></div>`
+        }
+        data.innerHTML=str
+
+    </script>
+</body>
+</html>

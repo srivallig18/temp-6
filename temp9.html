@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showData()
+        {
+            //data.innerHTML ="Hello world"
+          let email = document.getElementById("email").value
+          let password = document.getElementById("password").value
+          //data.innerHTML = ` ${email} , ${password}`
+          if(email == "srivallig18@gmail.com" && password == "hehe")
+          {
+            data.innerHTML = 'Welcome Srivalli :) !'
+          }
+          else
+          {
+            data.innerHTML = 'Andar jane nahi denge hehe pls D :)))) !'
+          }
+        }
+    </script>
+</head>
+<body>
+    <h1> Login Form</h1>
+    <p><input type ="text" id="email" placeholder ="email"/></p>
+    <p><input type ="password" id="password" placeholder ="password"/></p>
+    <button onclick="showData()">andar jao</button>
+    <hr />
+    <div id="data"></div>
+</body>
+</html>
