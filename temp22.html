@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="assets/images/WhatsApp Image 2025-02-21 at 13.39.55_ed252200.jpg" width="200px" id="ball"/>
+    <div id="root"></div>
+    <script>
+        ball.style.position="absolute";
+        let b = document.body;
+        let left=0;
+        let down=0;
+        b.onkeydown =(e) =>
+        {
+            if(e.key=="ArrowRight") left+=5;
+            if(e.key=="ArrowDown") down+=5;
+            if(e.key=="ArrowLeft") left-=5;
+            if(e.key=="ArrowUp") down-=5;
+           ball.style.left=left+"px";
+           ball.style.top=down+"px";
+        };
+    </script>
+</body>
+</html>

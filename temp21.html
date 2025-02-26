@@ -106,6 +106,9 @@
         "Nov",
         "Dec",
       ];
+      let yapping;
+      let gossiping;
+      let dancing;
       const showData = () => {
         let firstname = document.getElementById("firstname").value;
         let surname = document.getElementById("surname").value;
@@ -121,11 +124,13 @@
         if (gender[0].checked) g = "Female";
         if (gender[1].checked) g = "Male";
         if (gender[2].checked) g = pronoun;
-        let interests = document.getElementsByName("interests");
-        let i="";
-        if (interests[0].checked) i = "yapping";
-        if (interests[1].checked) i = "Gossiping";
-        if (interests[2].checked) i = "dancing";
+        yapping = document.getElementById("yapping").checked;
+        gossiping= document.getElementById("gossiping").checked;
+        dancing = document.getElementById("dancing").checked;
+        let strInterests = "";
+        if (yapping) strInterests += "yapping";
+        if (gossiping) strInterests += "gossiping";
+        if (dancing) strInterests += "dancing";
         let str = `
           <h3>Verify your information :)</h3>
           <p>Name:${firstname} ${surname}</p>
@@ -133,7 +138,7 @@
           <p>Password:${password}</p>
           <p>Gender:${g}</p>
           <p>Date of Birth:${dob}</p>
-          <p>Interests: ${i}</p>
+         <p>Interests:${strInterests}</p>
           <button>Confirm it</button>
           <button onclick="showForm()">Edit it</button>
         </div>
